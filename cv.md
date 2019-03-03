@@ -2,6 +2,7 @@
 # Junior Front-End Developer CV
 
 ## Personal information
+![CV photo](/cv-img.jpg)
 **Shirmyrat AKMAMEDAU**
 * email: muratx10@gmail.com
 * github: muratx10
