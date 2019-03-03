@@ -34,11 +34,12 @@ I am passionate about developing web-applications and interested in improving my
 	* Used jQuery library for interactive elements 
 
 ## Education
-* Brest State A.S.Pushkin University - _specialist, Business Administration and Management_
-* HTML, CSS & JavaScript Course at Educational Center of High-Tech Park Belarus
-* Web-application development with JavaScript at Educational Center of High-Tech Park Belarus
-* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/?utm=site-courses): Intensive course of JavaScript for web developers
-* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/frontend/?utm=site-courses): Intensive course of JavaScript for Front-End
+* Brest State A.S.Pushkin University - _specialist, Business Administration and Management_ __2008-2012__
+* HTML, CSS & JavaScript Course at Educational Center of High-Tech Park Belarus __Apr-May 2018__
+* Web-application development with JavaScript at Educational Center of High-Tech Park Belarus __Jun-Sep 2018__
+* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/?utm=site-courses): Intensive course of JavaScript for web developers __Jun-Aug 2018__
+* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/frontend/?utm=site-courses): Intensive course of JavaScript for Front-End __Nov-Dec 2018__
 
 ## Languages
 * English - Level **A2+**
+* Turkish - Level **B2**
