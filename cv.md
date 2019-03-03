@@ -6,8 +6,8 @@
 
 **Shirmyrat AKMAMEDAU**
 * email: muratx10@gmail.com
-* linkedIn: muratx10
-* github: muratx10
+* LinkedIn: [muratx10](https://www.linkedin.com/in/muratx10/)
+* github: [muratx10](https://github.com/muratx10)
 * mobile phone: +375336012012
 * skype: m866487068
 
