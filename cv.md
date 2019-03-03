@@ -30,7 +30,7 @@ I am passionate about developing web-applications and interested in improving my
 1.  **Graduation project at course Front-End Fundamentals at Educational Center of High-Tech Park Belarus**
      
 	 **Key pionts on project are:**
-	* CSS classes is named according to BEM methodolgy
+	* CSS classes are named according to BEM methodology
 	* Pages are adaptive & responsive designed
 	* Used jQuery library for interactive elements 
 
