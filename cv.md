@@ -28,14 +28,17 @@ I am passionate about developing web-applications and interested in improving my
 
 ## Experience
 1.  **Graduation project at course Front-End Fundamentals at Educational Center of High-Tech Park Belarus**
-      **Key parts on project are:**
+      **Key pionts on project are:**
 	* CSS classes is named according to BEM methodolgy
 	* Pages are adaptive & responsive designed
 	* Used jQuery library for interactive elements 
 
-** Education
+## Education
 * Brest State A.S.Pushkin University - _specialist, Business Administration and Management_
 * HTML, CSS & JavaScript Course at Educational Center of High-Tech Park Belarus
 * Web-application development with JavaScript at Educational Center of High-Tech Park Belarus
 * Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/?utm=site-courses): Intensive course of JavaScript for web developers
-* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/?utm=site-courses): Intensive course of JavaScript for Fron-End
+* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/frontend/?utm=site-courses): Intensive course of JavaScript for Front-End
+
+## Languages
+* English - Level **A2+**
