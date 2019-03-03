@@ -1,1 +1,1 @@
-[CV Link](https://github.com/muratx10/rsschool-2019Q1-cv/blob/gh-pages/cv.md)
+[Open CV](https://muratx10.github.io/rsschool-2019Q1-cv/cv)
