@@ -26,3 +26,16 @@ I am passionate about developing web-applications and interested in improving my
 * BEM
 * Adobe Photoshop
 
+## Experience
+1.  **Graduation project at course Front-End Fundamentals at Educational Center of High-Tech Park Belarus**
+      **Key parts on project are:**
+	* CSS classes is named according to BEM methodolgy
+	* Pages are adaptive & responsive designed
+	* Used jQuery library for interactive elements 
+
+** Education
+* Brest State A.S.Pushkin University - _specialist, Business Administration and Management_
+* HTML, CSS & JavaScript Course at Educational Center of High-Tech Park Belarus
+* Web-application development with JavaScript at Educational Center of High-Tech Park Belarus
+* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/?utm=site-courses): Intensive course of JavaScript for web developers
+* Online course at [dmitrylavrik](http://js.dmitrylavrik.ru/?utm=site-courses): Intensive course of JavaScript for Fron-End
