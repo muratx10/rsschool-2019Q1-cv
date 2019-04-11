@@ -14,7 +14,7 @@
   <link rel="shortcut icon" type="image/png" href="http://2ality.com/2011/10/logo-js/js.jpg" />
 </head>
 
-<body>
+<body class="preload">
   <header>
     <div class="header-wrap">
       <div class="navbar">
@@ -35,13 +35,13 @@
         <img src="./assets/cv.jpg" alt="profile photo" width="300px" height="300px">
       </div>
       <h1>Shirmurat AKMAMEDAU</h1>
-      <h2>Front-end Web Developer</h2>
+      <h2>Front-end Developer</h2>
       <div class="socialmedia">
-        <a href="https://github.com/muratx10" target="_blank"><span class="icon-github raised"></span></a>
-        <a href="https://www.linkedin.com/in/muratx10/" target="_blank"><span class="icon-linkedin raised"></span></a>
-        <a href="https://www.instagram.com/muratx10/" target="_blank"><span class="icon-instagram raised"></span></a>
-        <a href="https://www.facebook.com/muratx10" target="_blank"><span class="icon-facebook raised"></span></a>
-       <a href="https://plus.google.com/102346013363097403693" target="_blank"> <span class="icon-google raised"></span></a>
+        <a href="https://github.com/muratx10" title="Go to GitHub profile" target="_blank"><span class="icon-github raised"></span></a>
+        <a href="https://www.linkedin.com/in/muratx10/" title="Go to LinkedIn profile" target="_blank"><span class="icon-linkedin raised"></span></a>
+        <a href="https://www.instagram.com/muratx10/" title="Go to Instagram" target="_blank"><span class="icon-instagram raised"></span></a>
+        <a href="https://www.facebook.com/muratx10" title="Go to Facebook page" target="_blank"><span class="icon-facebook raised"></span></a>
+       <a href="https://plus.google.com/102346013363097403693" title="Go to Google profile" target="_blank"> <span class="icon-google raised"></span></a>
       </div>
     </div>
     <div class="about-section">
@@ -67,9 +67,19 @@
     </div>
     <div class="skills-section">
       <div class="inner-wrap">
-        <h3 id="Skills">Skills</h3>
+        <h3 id="Skills">Technical skills</h3>
+        
         <div class="skills__item">
-          <p>HTML5</p>
+          <p>JavaScript</p>
+          <div class="progress-bar-container">
+            <div class="progress-bar stripes animated reverse slower">
+              <span class="progress-bar-inner-js"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <p>HTML</p>
           <div class="progress-bar-container">
             <div class="progress-bar stripes animated reverse slower">
               <span class="progress-bar-inner"></span>
@@ -78,19 +88,10 @@
         </div>
 
         <div class="skills__item">
-          <p>CSS3</p>
+          <p>CSS</p>
           <div class="progress-bar-container">
             <div class="progress-bar stripes animated reverse slower">
               <span class="progress-bar-inner-css"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__item">
-          <p>JavaScript</p>
-          <div class="progress-bar-container">
-            <div class="progress-bar stripes animated reverse slower">
-              <span class="progress-bar-inner-js"></span>
             </div>
           </div>
         </div>
@@ -105,7 +106,7 @@
         </div>
 
         <div class="skills__item">
-          <p>git</p>
+          <p>Git</p>
           <div class="progress-bar-container">
             <div class="progress-bar stripes animated reverse slower">
               <span class="progress-bar-inner-git"></span>
@@ -118,6 +119,15 @@
           <div class="progress-bar-container">
             <div class="progress-bar stripes animated reverse slower">
               <span class="progress-bar-inner-wp"></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="skills__item">
+          <p>Gulp</p>
+          <div class="progress-bar-container">
+            <div class="progress-bar stripes animated reverse slower">
+              <span class="progress-bar-inner-bash"></span>
             </div>
           </div>
         </div>
@@ -136,15 +146,6 @@
           <div class="progress-bar-container">
             <div class="progress-bar stripes animated reverse slower">
               <span class="progress-bar-inner-node"></span>
-            </div>
-          </div>
-        </div>
-
-        <div class="skills__item">
-          <p>bash</p>
-          <div class="progress-bar-container">
-            <div class="progress-bar stripes animated reverse slower">
-              <span class="progress-bar-inner-bash"></span>
             </div>
           </div>
         </div>
@@ -212,6 +213,10 @@
   <footer>
 
   </footer>
+
+  <script src="./script.js">
+
+  </script>
 </body>
 
 </html>
