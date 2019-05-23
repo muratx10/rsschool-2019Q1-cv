@@ -1,0 +1,316 @@
+/* PROGRESS BAR for SKILLS section */
+
+/* HTML */
+
+@keyframes animate-stripes {
+  0% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 60px 0;
+  }
+}
+@keyframes progress {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 80%;
+  }
+}
+.progress-bar-container {
+  width: 100%;
+}
+
+.progress-bar {
+  background-color: #1a1a1a;
+  height: 20px;
+  width: 100%;
+  margin: 50px auto;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px #000 inset, 0 1px 0 #444;
+}
+
+.progress-bar-inner {
+  display: block;
+  height: 20px;
+  width: 80%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress 2s 1 linear;
+}
+
+.stripes {
+  background-size: 30px 30px;
+  background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+.stripes.animated {
+  animation: animate-stripes 0.6s linear infinite;
+}
+
+.stripes.animated.slower {
+  animation-duration: 1.25s;
+}
+
+.stripes.reverse {
+  animation-direction: reverse;
+}
+
+/* CSS */
+
+@keyframes progress-css {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.progress-bar-inner-css {
+  display: block;
+  height: 20px;
+  width: 70%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-css 2s 1 linear;
+}
+
+/* JS */
+@keyframes progress-js {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 55%;
+  }
+}
+
+.progress-bar-inner-js {
+  display: block;
+  height: 20px;
+  width: 55%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-js 2s 1 linear;
+}
+
+/* jquery */
+@keyframes progress-jq {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 38%;
+  }
+}
+
+.progress-bar-inner-jq {
+  display: block;
+  height: 20px;
+  width: 38%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-jq 2s 1 linear;
+}
+
+/* git */
+@keyframes progress-git {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+.progress-bar-inner-git {
+  display: block;
+  height: 20px;
+  width: 40%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-git 2s 1 linear;
+}
+
+/* webpack */
+@keyframes progress-wp {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 45%;
+  }
+}
+
+.progress-bar-inner-wp {
+  display: block;
+  height: 20px;
+  width: 45%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-wp 2s 1 linear;
+}
+
+/* babel */
+
+@keyframes progress-babel {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 30%;
+  }
+}
+
+.progress-bar-inner-babel {
+  display: block;
+  height: 20px;
+  width: 30%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-babel 2s 1 linear;
+}
+
+/* node.js */
+
+@keyframes progress-node {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 25%;
+  }
+}
+
+.progress-bar-inner-node {
+  display: block;
+  height: 20px;
+  width: 25%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-node 2s 1 linear;
+}
+
+/* bash */
+@keyframes progress-bash {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 70%;
+  }
+}
+
+.progress-bar-inner-bash {
+  display: block;
+  height: 20px;
+  width: 70%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-bash 2s 1 linear;
+}
+
+/* JSON */
+
+@keyframes progress-json {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+.progress-bar-inner-json {
+  display: block;
+  height: 20px;
+  width: 60%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-json 2s 1 linear;
+}
+
+/* BEM */
+@keyframes progress-bem {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 65%;
+  }
+}
+
+.progress-bar-inner-bem {
+  display: block;
+  height: 20px;
+  width: 65%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-bem 2s 1 linear;
+}
+
+/* Photoshop */
+@keyframes progress-ps {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 88%;
+  }
+}
+
+.progress-bar-inner-ps {
+  display: block;
+  height: 20px;
+  width: 88%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-ps 2s 1 linear;
+}
+
+/* VSC */
+@keyframes progress-vsc {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 76%;
+  }
+}
+
+.progress-bar-inner-vsc {
+  display: block;
+  height: 20px;
+  width: 76%;
+  background-color: #58bfd5;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+  position: relative;
+  animation: progress-vsc 2s 1 linear;
+}
