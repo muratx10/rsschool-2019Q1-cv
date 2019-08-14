@@ -22,11 +22,13 @@ window.addEventListener('scroll', function (e) {
         mainInfo.classList.add('scroll');
         profilePhoto.classList.add('hide');
         summarySection.classList.add('about-section-after-scroll');
+        mainInfo.style.boxShadow = '0 0 10px 5px black';
     } else if (coordsHeader > -250) {
         mainInfo.classList.remove('scroll');
         profilePhoto.classList.remove('hide');
         summarySection.classList.remove('about-section-after-scroll');
         summarySection.style.marginTop = '0';
+        mainInfo.style.boxShadow = 'none';
     } else if (coordsSummary < 0) {
         summarySection.style.marginTop = (heightMainInfo * 2.8) + 'px';
     }

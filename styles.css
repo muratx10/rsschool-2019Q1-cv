@@ -53,6 +53,7 @@ main {
     background: linear-gradient(-45deg, black, #23D5AB, #23A6D5, #02acef, #23A6D5, #23D5AB, black);
     animation: gradientAnimate 15s ease infinite;
     transition: 0.3s;
+    /* box-shadow: 0 0 10px 5px black; */
 }
 
 @keyframes gradientAnimate {
@@ -239,7 +240,7 @@ main {
 
 .icon-github,
 .icon-linkedin,
-.icon-mail,
+.socialmedia .icon-mail,
 .icon-facebook,
 .icon-google {
     color: #fff;
@@ -295,7 +296,7 @@ main {
 
 .about-section__right-block a {
     text-decoration: none;
-    color: inherit;
+    color: black;
     font-family: 'Titillium Web', sans-serif;
 }
 
