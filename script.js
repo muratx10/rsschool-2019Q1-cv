@@ -7,10 +7,13 @@ const preload = function () {
 
 window.onload = preload;
 
-let mainInfo = document.querySelector('.main-info'),
+const mainInfo = document.querySelector('.main-info'),
     profilePhoto = document.querySelector('.profile-photo'),
     header = document.querySelector('.header-wrap'),
-    summarySection = document.querySelector('.about-section');
+    summarySection = document.querySelector('.about-section'),
+    socialMediaBlock = document.querySelector('.socialmedia'),
+    tooltip = document.querySelector('.tooltip');
+
 
 window.addEventListener('scroll', function (e) {
     let coordsMain = mainInfo.getBoundingClientRect().top,
@@ -33,3 +36,13 @@ window.addEventListener('scroll', function (e) {
         summarySection.style.marginTop = (heightMainInfo * 2.8) + 'px';
     }
 });
+
+mainInfo.addEventListener('mouseover', (e) => {
+    const el = Array.from(e.target.classList).includes('icon-download');
+    if (el) {
+        tooltip.style.opacity = '1';
+    } else {
+        tooltip.style.opacity = '0';
+    }
+});
+
