@@ -11,7 +11,7 @@ const mainInfo = document.querySelector('.main-info'),
     profilePhoto = document.querySelector('.profile-photo'),
     header = document.querySelector('.header-wrap'),
     summarySection = document.querySelector('.about-section'),
-    socialMediaBlock = document.querySelector('.socialmedia'),
+    downloadBtn = document.querySelector('.icon-download'),
     tooltip = document.querySelector('.tooltip');
 
 
@@ -41,8 +41,12 @@ mainInfo.addEventListener('mouseover', (e) => {
     const el = Array.from(e.target.classList).includes('icon-download');
     if (el) {
         tooltip.style.opacity = '1';
+        downloadBtn.style.animation = 'none';
+        downloadBtn.classList.add('text-pop-up-top');
     } else {
         tooltip.style.opacity = '0';
+        downloadBtn.style.animation = 'download infinite 1s cubic-bezier(0.86, 0, 0.07, 1)';
+        downloadBtn.classList.remove('text-pop-up-top');
     }
 });
 
