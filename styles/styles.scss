@@ -7,8 +7,10 @@
 $font: 'Titillium Web',
 sans-serif;
 $fontSizeHeader: 24px;
+$fontSizeHeaderMobile: 18px;
 $fontSizeTooltip: 12px;
 $fontSizePrimary: 18px;
+$fontSizePrimaryMobile: 12px;
 $max-width: 1024px;
 $transition: 300ms;
 $primaryBgColor: #53BFD7;
@@ -64,6 +66,10 @@ main {
     background: linear-gradient(-45deg, black, #23D5AB, #23A6D5, #02acef, #23A6D5, #23D5AB, black);
     animation: gradientAnimate 15s ease infinite, glow infinite 4s;
     transition: $transition;
+
+    @media screen and (max-width:1130px) {
+        justify-content: space-between;
+    }
 }
 
 /* This class is added to main block when page is scrolled down */
@@ -78,6 +84,10 @@ main {
     flex-direction: row;
     animation: gradientAnimate 15s ease infinite;
     height: 60px;
+
+    @media screen and (max-width: 768px) {
+        height: 40px;
+    }
 }
 
 :root .scroll h2 {
@@ -89,17 +99,30 @@ main {
     color: #f5f5f5;
     text-shadow: 0 0 3px #f5f5f5, 0 0 15px #7deaec, 0 0 30px #7deaec;
 
+    @media screen and (max-width: 820px) {
+        display: none;
+    }
 }
 
 :root .scroll h1 {
     font-size: $fontSizePrimary;
     word-wrap: break-word;
     width: 160px;
+
+    @media screen and (max-width: 1130px) {
+        display: none;
+    }
 }
 
 :root .scroll .profile-photo {
     width: 50px;
     height: 50px;
+
+     @media screen and (max-width:768px) {
+         width: 40px;
+         height: 40px;
+         border: 1px #fff solid;
+     }
 }
 
 :root .scroll .profile-photo img {
@@ -107,6 +130,12 @@ main {
     top: -10%;
     width: 75px;
     height: 75px;
+
+     @media screen and (max-width:768px) {
+         width: 60px;
+         height: 60px;
+
+     }
 }
 
 .colored-bg {
@@ -197,6 +226,10 @@ main {
 .socialmedia {
     margin: 30px auto;
     position: relative;
+
+    @media screen and (max-width: 1130px) {
+        margin: 10px 0 10px;
+    }
 }
 
 .socialmedia a {
@@ -227,6 +260,12 @@ main {
     margin: 0 10px;
     transition: $transition;
     display: inline-block;
+
+    @media screen and (max-width: 1130px) {
+        font-size: $fontSizeHeaderMobile;
+        padding: 10px;
+        border: 1px #fff solid;
+    }
 }
 
 .raised {
@@ -260,6 +299,10 @@ main {
     z-index: 1;
     transition: $transition;
     opacity: 0;
+
+    @media screen and (max-width: 1130px) {
+        display: none;
+    }
 }
 
 .main-info {
@@ -281,9 +324,6 @@ main {
     }
 }
 
-
-
-
 .about-section,
 .skills-section,
 .experience-section {
@@ -295,11 +335,23 @@ main {
     font-size: $fontSizePrimary;
     color: #2B314A;
     font-weight: 400;
+
+    @media screen and (max-width: 768px) {
+        flex-direction: column;
+    }
+
+    p {
+        @media screen and (max-width: 768px) {
+            width: 70%;
+        }
+    }
 }
 
 .about-section {
     top: -220px;
 }
+
+
 
 .about-section__left-block,
 .about-section__right-block,
@@ -376,6 +428,9 @@ main {
 .experience-section .inner-wrap {
     display: flex;
     flex-direction: column;
+    @media screen and (max-width: 768px) {
+        display: block;
+    }
 }
 
 .experience-section {
@@ -395,6 +450,11 @@ main {
     z-index: 2;
     position: relative;
     transition: $transition;
+
+    @media screen and (max-width:768px) {
+        margin: 10px;
+        padding: 10px;
+    }
 }
 
 .experience__item {
@@ -403,6 +463,12 @@ main {
     font-weight: 400;
     position: relative;
     transition: $transition;
+
+    @media screen and (max-width: 768px) {
+        display: block;
+        margin: 5px;
+        width: 95%;
+    }
 }
 
 .experience-description {
@@ -415,6 +481,13 @@ main {
     position: relative;
     border: 1px solid rgba(0, 0, 0, 0);
     transition: $transition;
+
+    @media screen and (max-width:768px) {
+        left: 0;
+        top: 0;
+        margin: 10px;
+        padding: 10px;
+    }
 }
 
 .experience-description:after {

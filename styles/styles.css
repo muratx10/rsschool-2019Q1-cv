@@ -118,6 +118,11 @@ main {
   animation: gradientAnimate 15s ease infinite, glow infinite 4s;
   transition: 300ms;
 }
+@media screen and (max-width: 1130px) {
+  .main-info {
+    justify-content: space-between;
+  }
+}
 
 /* This class is added to main block when page is scrolled down */
 .scroll {
@@ -132,6 +137,11 @@ main {
   animation: gradientAnimate 15s ease infinite;
   height: 60px;
 }
+@media screen and (max-width: 768px) {
+  .scroll {
+    height: 40px;
+  }
+}
 
 :root .scroll h2 {
   color: #1a1a1a;
@@ -142,16 +152,33 @@ main {
   color: #f5f5f5;
   text-shadow: 0 0 3px #f5f5f5, 0 0 15px #7deaec, 0 0 30px #7deaec;
 }
+@media screen and (max-width: 820px) {
+  :root .scroll h2 {
+    display: none;
+  }
+}
 
 :root .scroll h1 {
   font-size: 18px;
   word-wrap: break-word;
   width: 160px;
 }
+@media screen and (max-width: 1130px) {
+  :root .scroll h1 {
+    display: none;
+  }
+}
 
 :root .scroll .profile-photo {
   width: 50px;
   height: 50px;
+}
+@media screen and (max-width: 768px) {
+  :root .scroll .profile-photo {
+    width: 40px;
+    height: 40px;
+    border: 1px #fff solid;
+  }
 }
 
 :root .scroll .profile-photo img {
@@ -159,6 +186,12 @@ main {
   top: -10%;
   width: 75px;
   height: 75px;
+}
+@media screen and (max-width: 768px) {
+  :root .scroll .profile-photo img {
+    width: 60px;
+    height: 60px;
+  }
 }
 
 .colored-bg {
@@ -250,6 +283,11 @@ main {
   margin: 30px auto;
   position: relative;
 }
+@media screen and (max-width: 1130px) {
+  .socialmedia {
+    margin: 10px 0 10px;
+  }
+}
 
 .socialmedia a {
   text-decoration: none;
@@ -280,6 +318,17 @@ main {
   transition: 300ms;
   display: inline-block;
 }
+@media screen and (max-width: 1130px) {
+  .icon-github,
+.icon-linkedin,
+.socialmedia .icon-mail,
+.icon-facebook,
+.icon-download {
+    font-size: 18px;
+    padding: 10px;
+    border: 1px #fff solid;
+  }
+}
 
 .raised {
   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
@@ -309,6 +358,11 @@ main {
   transition: 300ms;
   opacity: 0;
 }
+@media screen and (max-width: 1130px) {
+  .tooltip {
+    display: none;
+  }
+}
 
 .main-info .caret {
   animation: textAnimate 100ms ease;
@@ -337,6 +391,20 @@ main {
   font-size: 18px;
   color: #2B314A;
   font-weight: 400;
+}
+@media screen and (max-width: 768px) {
+  .about-section,
+.skills-section,
+.experience-section {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about-section p,
+.skills-section p,
+.experience-section p {
+    width: 70%;
+  }
 }
 
 .about-section {
@@ -419,6 +487,11 @@ main {
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 768px) {
+  .experience-section .inner-wrap {
+    display: block;
+  }
+}
 
 .experience-section {
   top: -180px;
@@ -438,6 +511,12 @@ main {
   position: relative;
   transition: 300ms;
 }
+@media screen and (max-width: 768px) {
+  .period {
+    margin: 10px;
+    padding: 10px;
+  }
+}
 
 .experience__item {
   display: flex;
@@ -445,6 +524,13 @@ main {
   font-weight: 400;
   position: relative;
   transition: 300ms;
+}
+@media screen and (max-width: 768px) {
+  .experience__item {
+    display: block;
+    margin: 5px;
+    width: 95%;
+  }
 }
 
 .experience-description {
@@ -457,6 +543,14 @@ main {
   position: relative;
   border: 1px solid rgba(0, 0, 0, 0);
   transition: 300ms;
+}
+@media screen and (max-width: 768px) {
+  .experience-description {
+    left: 0;
+    top: 0;
+    margin: 10px;
+    padding: 10px;
+  }
 }
 
 .experience-description:after {
