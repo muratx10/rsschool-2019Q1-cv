@@ -1,0 +1,85 @@
+//Animated background at main block 
+@keyframes gradientAnimate {
+    0% {
+        background-position: 0 50%
+    }
+
+    50% {
+        background-position: 100% 50%
+    }
+
+    100% {
+        background-position: 0 50%
+    }
+}
+
+// animation for text glowing
+@keyframes animateText {
+    0% {
+        color: #f5f5f5;
+        text-shadow: 0 0 3px #f5f5f5, 0 0 15px #7deaec, 0 0 30px #7deaec;
+    }
+
+    10% {
+        color: #f5f5f5;
+        text-shadow: 0 0 4px #f5f5f5, 0 0 20px #7deaec, 0 0 35px #7deaec;
+    }
+
+    20% {
+        color: #f5f5f5;
+        text-shadow: 0 0 5px #f5f5f5, 0 0 24px #7deaec, 0 0 37px #7deaec;
+    }
+
+    30% {
+        color: #f5f5f5;
+        text-shadow: 0 0 6px #f5f5f5, 0 0 25px #7deaec, 0 0 40px #7deaec;
+    }
+
+    40% {
+        color: #f5f5f5;
+        text-shadow: 0 0 5px #f5f5f5, 0 0 24px #7deaec, 0 0 37px #7deaec;
+    }
+
+    60% {
+        color: #f5f5f5;
+        text-shadow: 0 0 4px #f5f5f5, 0 0 20px #7deaec, 0 0 35px #7deaec;
+    }
+
+    100% {
+        color: #f5f5f5;
+        text-shadow: 0 0 3px #f5f5f5, 0 0 15px #7deaec, 0 0 30px #7deaec;
+    }
+}
+
+@keyframes download {
+    0% {
+        -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5),
+            0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5),
+            0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5),
+            0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    50% {
+        box-shadow: 0 0 3px #f5f5f5,
+            0 0 15px #7deaec,
+            0 0 40px #7deaec;
+    }
+
+    100% {
+        -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5),
+            0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+        -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5),
+            0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+        box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5),
+            0 1px 4px rgba(0, 0, 0, 0.3),
+            0 0 40px rgba(0, 0, 0, 0.1) inset;
+    }
+}
+

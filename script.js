@@ -12,28 +12,33 @@ const mainInfo = document.querySelector('.main-info'),
     header = document.querySelector('.header-wrap'),
     summarySection = document.querySelector('.about-section'),
     downloadBtn = document.querySelector('.icon-download'),
-    tooltip = document.querySelector('.tooltip');
+    tooltip = document.querySelector('.tooltip'),
+    emptyCap = document.querySelector('.empty-cap'),
+    h3 = document.querySelector('h3');
+
+const name = '{ Junior Front-End Developer }'.split('');
+console.log(name);
+
+
 
 
 window.addEventListener('scroll', function (e) {
     let coordsMain = mainInfo.getBoundingClientRect().top,
         coordsHeader = header.getBoundingClientRect().top,
-        coordsSummary = summarySection.getBoundingClientRect().top,
         heightMainInfo = mainInfo.getBoundingClientRect().height;
 
-    if (coordsMain < -305) {
+    if (coordsMain < -500) {
         mainInfo.classList.add('scroll');
         profilePhoto.classList.add('hide');
         summarySection.classList.add('about-section-after-scroll');
         mainInfo.style.boxShadow = '0 0 10px 5px black';
-    } else if (coordsHeader > -250) {
+        emptyCap.style.height = heightMainInfo + 'px';
+    } else if (coordsHeader > -500) {
         mainInfo.classList.remove('scroll');
         profilePhoto.classList.remove('hide');
         summarySection.classList.remove('about-section-after-scroll');
-        summarySection.style.marginTop = '0';
         mainInfo.style.boxShadow = 'none';
-    } else if (coordsSummary < 0) {
-        summarySection.style.marginTop = (heightMainInfo * 2.8) + 'px';
+        emptyCap.style.height = 0;
     }
 });
 
