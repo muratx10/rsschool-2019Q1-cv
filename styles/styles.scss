@@ -1,9 +1,11 @@
 @import 'keyframes';
+
 * {
     margin: 0;
 }
 
-$font: 'Titillium Web', sans-serif;
+$font: 'Titillium Web',
+sans-serif;
 $fontSizeHeader: 24px;
 $fontSizeTooltip: 12px;
 $fontSizePrimary: 18px;
@@ -259,6 +261,26 @@ main {
     transition: $transition;
     opacity: 0;
 }
+
+.main-info {
+    .caret {
+        animation: textAnimate 100ms ease;
+
+        &:after {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 27px;
+            background: #fff;
+            position: relative;
+            right: 0;
+            top: 4px;
+            margin-left: 2px;
+            animation: blinker infinite 1000ms;
+        }
+    }
+}
+
 
 
 

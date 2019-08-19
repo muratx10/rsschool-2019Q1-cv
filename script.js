@@ -1,6 +1,7 @@
 'use strict';
 // @ts-check
 
+
 const preload = function () {
     document.getElementsByTagName('body')[0].classList.remove('preload');
 };
@@ -14,10 +15,37 @@ const mainInfo = document.querySelector('.main-info'),
     downloadBtn = document.querySelector('.icon-download'),
     tooltip = document.querySelector('.tooltip'),
     emptyCap = document.querySelector('.empty-cap'),
-    h3 = document.querySelector('h3');
+    h1 = document.querySelector('.main-info h1'),
+    h2 = document.querySelector('.main-info h2');
 
-const name = '{ Junior Front-End Developer }'.split('');
-console.log(name);
+const title = '{ Junior Front-End Developer }'.split('');
+const lastName = 'Shirmurad AKMAMEDAU'.split('');
+let i = 0;
+let typo = null;
+
+const timer = setInterval(() => {
+    h1.textContent += lastName[i];
+    if (i === lastName.length - 1) {
+        typo = true;
+        i = 0;
+        h1.classList.remove('caret');
+        h2.classList.add('caret');
+        clearInterval(timer);
+    } else {
+        i++;
+    }
+}, 50);
+
+const timer2 = setInterval(() => {
+    if (typo) {
+        h2.textContent += title[i];
+        if (i === title.length - 1) {
+            clearInterval(timer2);
+        } else {
+            i++;
+        }
+    }
+}, 50);
 
 
 
@@ -33,6 +61,7 @@ window.addEventListener('scroll', function (e) {
         summarySection.classList.add('about-section-after-scroll');
         mainInfo.style.boxShadow = '0 0 10px 5px black';
         emptyCap.style.height = heightMainInfo + 'px';
+        h2.classList.remove('caret');
     } else if (coordsHeader > -500) {
         mainInfo.classList.remove('scroll');
         profilePhoto.classList.remove('hide');
@@ -54,4 +83,3 @@ mainInfo.addEventListener('mouseover', (e) => {
         downloadBtn.classList.remove('text-pop-up-top');
     }
 });
-

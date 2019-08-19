@@ -1,0 +1,30 @@
+{
+  "name": "rsschool-2019Q1-cv",
+  "version": "1.0.0",
+  "description": "CV is not complete yet, is in process 👨🏻‍💻 [Check online CV](https://muratx10.github.io/rsschool-2019Q1-cv)",
+  "main": "script.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.39.2",
+    "webpack-cli": "^3.3.7",
+    "webpack-dev-server": "^3.8.0"
+  },
+  "scripts": {
+    "dev": "webpack-dev-server --mode development --open 'Google Chrome'",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muratx10/rsschool-2019Q1-cv.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muratx10/rsschool-2019Q1-cv/issues"
+  },
+  "homepage": "https://github.com/muratx10/rsschool-2019Q1-cv#readme"
+}
