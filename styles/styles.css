@@ -250,6 +250,12 @@ main {
   color: #fff;
   margin-right: 10px;
 }
+@media screen and (max-width: 480px) {
+  .main-info h1,
+.main-info h2 {
+    margin: 10px auto;
+  }
+}
 
 .profile-photo {
   width: 250px;

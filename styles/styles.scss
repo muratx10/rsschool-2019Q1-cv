@@ -193,6 +193,10 @@ main {
 .main-info h2 {
     color: #fff;
     margin-right: 10px;
+
+    @media screen and (max-width:480px) {
+        margin: 10px auto;
+    }
 }
 
 .profile-photo {
