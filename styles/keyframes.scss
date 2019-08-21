@@ -94,3 +94,19 @@
     }
 }
 
+@keyframes dropDown {
+    0% {
+        transform: translateY(-100px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes uplift {
+    100% {
+        transform: translate(-500px);
+    }
+}
+

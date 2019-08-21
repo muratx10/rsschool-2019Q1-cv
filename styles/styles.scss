@@ -7,10 +7,10 @@
 $font: 'Titillium Web',
 sans-serif;
 $fontSizeHeader: 24px;
-$fontSizeHeaderMobile: 18px;
+$fontSizeHeaderMobile: 22px;
 $fontSizeTooltip: 12px;
 $fontSizePrimary: 18px;
-$fontSizePrimaryMobile: 12px;
+$fontSizePrimaryMobile: 18px;
 $max-width: 1024px;
 $transition: 300ms;
 $primaryBgColor: #53BFD7;
@@ -39,6 +39,14 @@ main {
     position: relative;
 }
 
+.empty-cap {
+    height: 520px;
+    position: absolute;
+    top: 0;
+    z-index: -99;
+
+}
+
 .header-wrap {
     max-width: $max-width;
     margin: 0 auto;
@@ -65,7 +73,8 @@ main {
     background-size: 300% 300% !important;
     background: linear-gradient(-45deg, black, #23D5AB, #23A6D5, #02acef, #23A6D5, #23D5AB, black);
     animation: gradientAnimate 15s ease infinite, glow infinite 4s;
-    transition: $transition;
+    //transition: $transition;
+    height: 520px;
 
     @media screen and (max-width:1130px) {
         justify-content: space-between;
@@ -75,14 +84,14 @@ main {
 /* This class is added to main block when page is scrolled down */
 .scroll {
     max-width: initial;
-    transition: $transition;
+    //transition: $transition;
     position: fixed;
     top: 0;
     border-radius: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9;
     flex-direction: row;
-    animation: gradientAnimate 15s ease infinite;
+    animation: gradientAnimate 15s ease infinite, dropDown 1s ease;
     height: 60px;
 
     @media screen and (max-width: 768px) {
@@ -118,11 +127,11 @@ main {
     width: 50px;
     height: 50px;
 
-     @media screen and (max-width:768px) {
-         width: 40px;
-         height: 40px;
-         border: 1px #fff solid;
-     }
+    @media screen and (max-width:768px) {
+        width: 40px;
+        height: 40px;
+        border: 1px #fff solid;
+    }
 }
 
 :root .scroll .profile-photo img {
@@ -131,11 +140,11 @@ main {
     width: 75px;
     height: 75px;
 
-     @media screen and (max-width:768px) {
-         width: 60px;
-         height: 60px;
+    @media screen and (max-width:768px) {
+        width: 60px;
+        height: 60px;
 
-     }
+    }
 }
 
 .colored-bg {
@@ -189,14 +198,28 @@ main {
     transition: $transition;
 }
 
-.main-info h1,
-.main-info h2 {
-    color: #fff;
-    margin-right: 10px;
+.main-info {
+
+    h1,
+    h2 {
+        color: #fff;
+        margin-right: 10px;
+    }
 
     @media screen and (max-width:480px) {
-        margin: 10px auto;
+        margin: 0 auto;
+        line-height: normal;
+
+        h1 {
+            font-size: $fontSizeHeaderMobile;
+        }
+
+        h2 {
+            font-size: $fontSizePrimaryMobile;
+        }
+
     }
+
 }
 
 .profile-photo {
@@ -324,6 +347,11 @@ main {
             top: 4px;
             margin-left: 2px;
             animation: blinker infinite 1000ms;
+
+            @media screen and(max-width:480px) {
+                height: 18px;
+                width: 3px;
+            }
         }
     }
 }
@@ -432,9 +460,31 @@ main {
 .experience-section .inner-wrap {
     display: flex;
     flex-direction: column;
+
     @media screen and (max-width: 768px) {
         display: block;
     }
+
+    @media screen and (max-width:480px) {
+        width: initial;
+        padding: 15px;
+        br {
+            display: none;
+        }
+        h3 {
+            font-size: $fontSizeHeaderMobile;
+        }
+        .period {
+            width: initial;
+            font-size: $fontSizePrimaryMobile;
+        }
+
+        h5, ul {
+            font-size: $fontSizePrimaryMobile;
+        }
+
+    }
+    
 }
 
 .experience-section {
@@ -529,4 +579,12 @@ main {
     background-color: #58bfd5;
     color: #fff;
     transition: $transition;
+}
+
+header {
+    .navbar {
+        @media screen and (max-width:480px) {
+            display: none;
+        }
+    }
 }

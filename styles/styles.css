@@ -62,6 +62,19 @@
     opacity: 1;
   }
 }
+@keyframes dropDown {
+  0% {
+    transform: translateY(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes uplift {
+  100% {
+    transform: translate(-500px);
+  }
+}
 * {
   margin: 0;
 }
@@ -90,6 +103,13 @@ main {
   position: relative;
 }
 
+.empty-cap {
+  height: 520px;
+  position: absolute;
+  top: 0;
+  z-index: -99;
+}
+
 .header-wrap {
   max-width: 1024px;
   margin: 0 auto;
@@ -116,7 +136,7 @@ main {
   background-size: 300% 300% !important;
   background: linear-gradient(-45deg, black, #23D5AB, #23A6D5, #02acef, #23A6D5, #23D5AB, black);
   animation: gradientAnimate 15s ease infinite, glow infinite 4s;
-  transition: 300ms;
+  height: 520px;
 }
 @media screen and (max-width: 1130px) {
   .main-info {
@@ -127,14 +147,13 @@ main {
 /* This class is added to main block when page is scrolled down */
 .scroll {
   max-width: initial;
-  transition: 300ms;
   position: fixed;
   top: 0;
   border-radius: 0;
   width: 100%;
-  z-index: 99;
+  z-index: 9;
   flex-direction: row;
-  animation: gradientAnimate 15s ease infinite;
+  animation: gradientAnimate 15s ease infinite, dropDown 1s ease;
   height: 60px;
 }
 @media screen and (max-width: 768px) {
@@ -251,9 +270,15 @@ main {
   margin-right: 10px;
 }
 @media screen and (max-width: 480px) {
-  .main-info h1,
-.main-info h2 {
-    margin: 10px auto;
+  .main-info {
+    margin: 0 auto;
+    line-height: normal;
+  }
+  .main-info h1 {
+    font-size: 22px;
+  }
+  .main-info h2 {
+    font-size: 18px;
   }
 }
 
@@ -330,7 +355,7 @@ main {
 .socialmedia .icon-mail,
 .icon-facebook,
 .icon-download {
-    font-size: 18px;
+    font-size: 22px;
     padding: 10px;
     border: 1px #fff solid;
   }
@@ -384,6 +409,12 @@ main {
   top: 4px;
   margin-left: 2px;
   animation: blinker infinite 1000ms;
+}
+@media screen and (max-width: 480px) {
+  .main-info .caret:after {
+    height: 18px;
+    width: 3px;
+  }
 }
 
 .about-section,
@@ -498,6 +529,25 @@ main {
     display: block;
   }
 }
+@media screen and (max-width: 480px) {
+  .experience-section .inner-wrap {
+    width: initial;
+    padding: 15px;
+  }
+  .experience-section .inner-wrap br {
+    display: none;
+  }
+  .experience-section .inner-wrap h3 {
+    font-size: 22px;
+  }
+  .experience-section .inner-wrap .period {
+    width: initial;
+    font-size: 18px;
+  }
+  .experience-section .inner-wrap h5, .experience-section .inner-wrap ul {
+    font-size: 18px;
+  }
+}
 
 .experience-section {
   top: -180px;
@@ -594,6 +644,12 @@ main {
   background-color: #58bfd5;
   color: #fff;
   transition: 300ms;
+}
+
+@media screen and (max-width: 480px) {
+  header .navbar {
+    display: none;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */

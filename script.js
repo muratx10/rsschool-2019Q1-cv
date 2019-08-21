@@ -1,6 +1,4 @@
 'use strict';
-// @ts-check
-
 
 const preload = function () {
     document.getElementsByTagName('body')[0].classList.remove('preload');
@@ -47,27 +45,24 @@ const timer2 = setInterval(() => {
     }
 }, 50);
 
-
-
-
 window.addEventListener('scroll', function (e) {
     let coordsMain = mainInfo.getBoundingClientRect().top,
         coordsHeader = header.getBoundingClientRect().top,
-        heightMainInfo = mainInfo.getBoundingClientRect().height;
+        heightMainInfo = mainInfo.getBoundingClientRect().height,
+        heightHeader = header.getBoundingClientRect().height;
+    this.console.log(`Header:${heightHeader}, MainInfo:${heightMainInfo}`);
 
-    if (coordsMain < -500) {
+    if (coordsMain < -(heightMainInfo)) {
         mainInfo.classList.add('scroll');
         profilePhoto.classList.add('hide');
-        summarySection.classList.add('about-section-after-scroll');
         mainInfo.style.boxShadow = '0 0 10px 5px black';
-        emptyCap.style.height = heightMainInfo + 'px';
+        emptyCap.style.position = 'relative';
         h2.classList.remove('caret');
-    } else if (coordsHeader > -500) {
+    } else if (coordsHeader > -(heightMainInfo + 550)) {
         mainInfo.classList.remove('scroll');
         profilePhoto.classList.remove('hide');
-        summarySection.classList.remove('about-section-after-scroll');
         mainInfo.style.boxShadow = 'none';
-        emptyCap.style.height = 0;
+        emptyCap.style.position = 'absolute';
     }
 });
 
