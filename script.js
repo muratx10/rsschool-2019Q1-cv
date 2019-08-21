@@ -14,7 +14,8 @@ const mainInfo = document.querySelector('.main-info'),
     tooltip = document.querySelector('.tooltip'),
     emptyCap = document.querySelector('.empty-cap'),
     h1 = document.querySelector('.main-info h1'),
-    h2 = document.querySelector('.main-info h2');
+    h2 = document.querySelector('.main-info h2'),
+    icons = Array.from(document.querySelectorAll('.socialmedia span'));
 
 const title = '{ Junior Front-End Developer }'.split('');
 const lastName = 'Shirmurad AKMAMEDAU'.split('');
@@ -48,9 +49,7 @@ const timer2 = setInterval(() => {
 window.addEventListener('scroll', function (e) {
     let coordsMain = mainInfo.getBoundingClientRect().top,
         coordsHeader = header.getBoundingClientRect().top,
-        heightMainInfo = mainInfo.getBoundingClientRect().height,
-        heightHeader = header.getBoundingClientRect().height;
-    this.console.log(`Header:${heightHeader}, MainInfo:${heightMainInfo}`);
+        heightMainInfo = mainInfo.getBoundingClientRect().height;
 
     if (coordsMain < -(heightMainInfo)) {
         mainInfo.classList.add('scroll');
@@ -58,11 +57,19 @@ window.addEventListener('scroll', function (e) {
         mainInfo.style.boxShadow = '0 0 10px 5px black';
         emptyCap.style.position = 'relative';
         h2.classList.remove('caret');
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].style.padding = '10px';
+            icons[i].style.border = '1px solid #fff';
+        }
     } else if (coordsHeader > -(heightMainInfo + 550)) {
         mainInfo.classList.remove('scroll');
         profilePhoto.classList.remove('hide');
         mainInfo.style.boxShadow = 'none';
         emptyCap.style.position = 'absolute';
+        for (let i = 0; i < icons.length; i++) {
+            icons[i].style.padding = '15px';
+            icons[i].style.border = '2px solid #fff';
+        }
     }
 });
 
