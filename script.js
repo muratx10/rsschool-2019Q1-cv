@@ -6,7 +6,8 @@ const preload = function () {
 
 window.onload = preload;
 
-const mainInfo = document.querySelector('.main-info'),
+const main = document.querySelector('main'),
+    mainInfo = document.querySelector('.main-info'),
     profilePhoto = document.querySelector('.profile-photo'),
     header = document.querySelector('.header-wrap'),
     summarySection = document.querySelector('.about-section'),
@@ -15,7 +16,8 @@ const mainInfo = document.querySelector('.main-info'),
     emptyCap = document.querySelector('.empty-cap'),
     h1 = document.querySelector('.main-info h1'),
     h2 = document.querySelector('.main-info h2'),
-    icons = Array.from(document.querySelectorAll('.socialmedia span'));
+    icons = Array.from(document.querySelectorAll('.socialmedia span')),
+    techSkills = document.querySelector('.techSkills');
 
 const title = '{ Junior Front-End Developer }'.split('');
 const lastName = 'Shirmurad AKMAMEDAU'.split('');
@@ -46,11 +48,38 @@ const timer2 = setInterval(() => {
     }
 }, 50);
 
-window.addEventListener('scroll', function (e) {
+//This block is animating skills level with text and progress line
+const itemsLevel = Array.from(document.querySelectorAll('.item .list li'));
+const progressLine = Array.from(document.querySelectorAll('.progress'));
+const animateSkills = () => {
+    for (let i = 0; i < itemsLevel.length; i++) {
+        let level = parseInt(itemsLevel[i].dataset.level);
+        let outputNum = 0;
+        setInterval(() => {
+            let span = itemsLevel[i].firstElementChild;
+            span.textContent = `(${outputNum}%)`;
+            progressLine[i].style.width = `${outputNum}%`;
+            progressLine[i].style.background = `linear-gradient(45deg, rgba(181,0,0,1) 0%, hsla(${outputNum}, 100%, 50%, 1) 100%, rgba(34,255,25,1) 120%)`;
+            if (outputNum === level) {
+                clearInterval();
+            } else {
+                outputNum++;
+            }
+        }, 20);
+    };
+}
+
+let animateFlag = true;
+
+window.addEventListener('scroll', e => {
     let coordsMain = mainInfo.getBoundingClientRect().top,
         coordsHeader = header.getBoundingClientRect().top,
         heightMainInfo = mainInfo.getBoundingClientRect().height;
 
+    if ((techSkills.getBoundingClientRect().top + 350 < window.innerHeight) && animateFlag) {
+        animateFlag = false;
+        animateSkills();
+    };
     if (coordsMain < -(heightMainInfo)) {
         mainInfo.classList.add('scroll');
         profilePhoto.classList.add('hide');
@@ -72,35 +101,3 @@ window.addEventListener('scroll', function (e) {
         }
     }
 });
-
-mainInfo.addEventListener('mouseover', (e) => {
-    const el = Array.from(e.target.classList).includes('icon-download');
-    if (el) {
-        tooltip.style.opacity = '1';
-        downloadBtn.style.animation = 'none';
-        downloadBtn.classList.add('text-pop-up-top');
-    } else {
-        tooltip.style.opacity = '0';
-        downloadBtn.style.animation = 'download infinite 1s cubic-bezier(0.86, 0, 0.07, 1)';
-        downloadBtn.classList.remove('text-pop-up-top');
-    }
-});
-
-
-const itemsLevel = Array.from(document.querySelectorAll('.item .list li'));
-const progressLine = Array.from(document.querySelectorAll('.progress'));
-for (let i = 0; i < itemsLevel.length; i++) {
-    let level = parseInt(itemsLevel[i].dataset.level);
-    let outputNum = 0;
-    const timer3 = setInterval(() => {
-        let span = itemsLevel[i].firstElementChild;
-        span.textContent = `(${outputNum}%)`;
-        progressLine[i].style.width = `${outputNum}%`;
-        if (outputNum === level) {
-            clearInterval(timer3);
-        } else {
-            outputNum++;
-        }
-    }, 20);
-};
-

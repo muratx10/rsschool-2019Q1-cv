@@ -4,7 +4,8 @@
     margin: 0;
 }
 
-$font: 'Titillium Web', sans-serif;
+$font: 'Titillium Web',
+sans-serif;
 $fontSizeHeader: 24px;
 $fontSizeHeaderMobile: 22px;
 $fontSizeTooltip: 12px;
@@ -43,7 +44,6 @@ main {
     position: absolute;
     top: 0;
     z-index: -99;
-
 }
 
 .header-wrap {
@@ -90,6 +90,7 @@ main {
     flex-direction: row;
     animation: gradientAnimate 15s ease infinite, dropDown 1s ease;
     height: 50px;
+
     @media screen and (max-width: 768px) {
         height: 40px;
     }
@@ -143,7 +144,6 @@ main {
     @media screen and (max-width:768px) {
         width: 60px;
         height: 60px;
-
     }
 }
 
@@ -158,7 +158,6 @@ main {
     text-align: center;
     display: flex;
     justify-content: space-between;
-    /* border: 1px black solid; */
     padding: 0;
 }
 
@@ -359,43 +358,63 @@ main {
 .techSkills {
     @extend .about-section;
     margin: 10px auto;
+
+    .column {
+        width: 100%;
+        margin: 10px 50px;
+        height: 810px;
+        position: relative;
+
+        @media screen and (max-width: 768px) {
+            height: 100%;
+            margin: 0;
+        }
+
+        &:nth-child(2):before {
+            content: '';
+            display: block;
+            height: 100%;
+            width: 2px;
+            border-radius: 1px;
+            background: rgba($color: #000, $alpha: 0.08);
+            position: absolute;
+            top: 0;
+            left: -10%;
+        }
+    }
+
     .item {
         width: 100%;
         margin: 30px;
-        display: flex;
-        justify-content: space-between;
+
         .list {
-            width: 42%;
+            width: 90%;
+
             li {
                 margin: 10px 0;
                 padding: 5px;
                 border-radius: 5px;
                 border: thin solid rgba($color: #000, $alpha: 0.2);
                 position: relative;
+                transition: $transition;
+                -webkit-user-select: none;
+                -moz-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+
+                &:hover {
+                    @extend .raised;
+                }
 
                 .progress {
-                    height: 10px;
+                    height: 5px;
                     border-radius: 3px;
                     margin-top: 2px;
                     display: block;
-                    background: #02acef;
                     position: relative;
                     top: 0;
                     left: 0;
                 }
-                
-                // &:after {
-                //     content: '';
-                //     height: 10px;
-                //     border-radius: 3px;
-                //     margin-top: 2px;
-                //     display: block;
-                //     width: 100%;
-                //     background: #02acef;
-                //     position: relative;
-                //     top: 0;
-                //     left: 0;
-                // }
             }
         }
     }
@@ -513,23 +532,27 @@ main {
     @media screen and (max-width:480px) {
         width: initial;
         padding: 15px;
+
         br {
             display: none;
         }
+
         h3 {
             font-size: $fontSizeHeaderMobile;
         }
+
         .period {
             width: initial;
             font-size: $fontSizePrimaryMobile;
         }
 
-        h5, ul {
+        h5,
+        ul {
             font-size: $fontSizePrimaryMobile;
         }
 
     }
-    
+
 }
 
 .experience-section {
