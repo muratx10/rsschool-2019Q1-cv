@@ -4,8 +4,7 @@
     margin: 0;
 }
 
-$font: 'Titillium Web',
-sans-serif;
+$font: 'Titillium Web', sans-serif;
 $fontSizeHeader: 24px;
 $fontSizeHeaderMobile: 22px;
 $fontSizeTooltip: 12px;
@@ -352,6 +351,23 @@ main {
             @media screen and(max-width:480px) {
                 height: 18px;
                 width: 3px;
+            }
+        }
+    }
+}
+
+.techSkills {
+    @extend .about-section;
+    margin: 10px auto;
+    .item {
+        width: 100%;
+        margin: 30px;
+        display: flex;
+        justify-content: space-between;
+        .list {
+            width: 42%;
+            li {
+                margin: 10px 0;
             }
         }
     }

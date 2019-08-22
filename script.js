@@ -85,3 +85,20 @@ mainInfo.addEventListener('mouseover', (e) => {
         downloadBtn.classList.remove('text-pop-up-top');
     }
 });
+
+
+const itemsLevel = Array.from(document.querySelectorAll('.item .list li'));
+for (let i = 0; i < itemsLevel.length; i++) {
+    let level = parseInt(itemsLevel[i].dataset.level);
+    let outputNum = 0;
+    const timer3 = setInterval(() => {
+        let span = itemsLevel[i].firstElementChild;
+        span.textContent = `(${outputNum}%)`;
+        if (outputNum === level) {
+            clearInterval(timer3);
+        } else {
+            outputNum++;
+        }
+    }, 20);
+};
+
