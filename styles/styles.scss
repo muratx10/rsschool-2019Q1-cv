@@ -368,6 +368,34 @@ main {
             width: 42%;
             li {
                 margin: 10px 0;
+                padding: 5px;
+                border-radius: 5px;
+                border: thin solid rgba($color: #000, $alpha: 0.2);
+                position: relative;
+
+                .progress {
+                    height: 10px;
+                    border-radius: 3px;
+                    margin-top: 2px;
+                    display: block;
+                    background: #02acef;
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                }
+                
+                // &:after {
+                //     content: '';
+                //     height: 10px;
+                //     border-radius: 3px;
+                //     margin-top: 2px;
+                //     display: block;
+                //     width: 100%;
+                //     background: #02acef;
+                //     position: relative;
+                //     top: 0;
+                //     left: 0;
+                // }
             }
         }
     }

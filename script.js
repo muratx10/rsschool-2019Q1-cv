@@ -88,12 +88,14 @@ mainInfo.addEventListener('mouseover', (e) => {
 
 
 const itemsLevel = Array.from(document.querySelectorAll('.item .list li'));
+const progressLine = Array.from(document.querySelectorAll('.progress'));
 for (let i = 0; i < itemsLevel.length; i++) {
     let level = parseInt(itemsLevel[i].dataset.level);
     let outputNum = 0;
     const timer3 = setInterval(() => {
         let span = itemsLevel[i].firstElementChild;
         span.textContent = `(${outputNum}%)`;
+        progressLine[i].style.width = `${outputNum}%`;
         if (outputNum === level) {
             clearInterval(timer3);
         } else {
