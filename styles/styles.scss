@@ -452,6 +452,7 @@ main {
     line-height: 1.5em;
     word-break: normal;
     hyphens: auto;
+    //display: none;
 }
 
 .about-section__right-block {
@@ -557,14 +558,21 @@ main {
 .experience-section {
     top: -180px;
     position: relative;
+    a {
+        font-style: italic;
+        color: inherit;
+    }
+
+    p {
+        font-size: 18px;
+    }
+    
 }
 
 .period {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 185px;
-    height: auto;
     padding: 20px;
     margin: 30px 70px 30px 0px;
     background-color: #f1f1f1;
@@ -608,6 +616,7 @@ main {
 }
 
 .experience-description {
+    width: 100%;
     margin: 30px -120px 30px 0px;
     padding: 10px 10px 10px 90px;
     box-shadow: 1px 1px 1px 1px rgba(130, 130, 130, 0.4);
