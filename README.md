@@ -1,6 +1,6 @@
 # CV is not complete yet, in process 👨🏻‍💻
 
-[Check built CV landing page](https://muratx10.github.io/rsschool-2019Q1-cv)
+[Check built CV landing page](https://muratx10.github.io/rsschool-2019Q1-cv/)
 
 ## Tools & technologies used:
 * CoreJS _(no plugins, no libraries)_
